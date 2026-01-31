@@ -1,13 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Pong</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-  <canvas id="canvas" width="1000" height="500"></canvas>
+  <title>Pong</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="game-container">
+    <div class="score p1" id="p1Score">0</div>
+    <div class="title">PONG</div>
+    <div class="score p2" id="p2Score">0</div>
+
+    <canvas id="canvas" width="1000" height="500"></canvas>
+
+    <div class="music-hint" id="music">Press M for Music 🎵</div>
+  </div>
+
   <script src="main.js" type="module"></script>
-  <span id="pong">PONG</span>
-  <div id="p1Score"></div>
-  <div id="p2Score"></div>
-  <span id="music">Press M for Music🎵🎶🎵</span>
 </body>
 </html>

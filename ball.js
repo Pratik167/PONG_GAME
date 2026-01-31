@@ -14,23 +14,12 @@ class Ball {
     this.color = "black";
     this.speed =2;
     this.direction = {
-    x:DIRECTIONS[Math.floor(Math.random()*DIRECTIONS.length)],
-    y:DIRECTIONS[Math.floor(Math.random()*DIRECTIONS.length)],  
+    x:1,
+    y:1,  
     }
   }
-  // collide(){
-    
-  //   if(this.position.x-this.size.radius<=0||this.position.x+this.size.radius>=1000)
-  //   {
-  //     this.direction.x*=-1;
-  //   }
-  //   if(this.position.y-this.size.radius<=0||this.position.y+this.size.radius>=500)
-  //   {
-  //     this.direction.y*=-1;
-  //   }
-  
-  // }
   draw() {
+
     this.ctx.beginPath();
     this.ctx.arc(
       this.position.x,
@@ -38,12 +27,11 @@ class Ball {
       this.size.radius,
       0,360,
     );
-    this.ctx.fillStyle = this.color;
+     this.ctx.fillStyle = this.color;
     this.ctx.fill();
   }
   
   update(){
-    // this.collide();
     this.position.x=this.position.x+this.speed*this.direction.x; 
     this.position.y=this.position.y+this.speed*this.direction.y; 
   }
