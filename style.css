@@ -63,3 +63,10 @@ body {
   font-size: 14px;
   opacity: 0.8;
 }
+
+#space{
+  position: absolute;
+  left: 100;
+  top: 100;
+  font-size: 30px;
+}

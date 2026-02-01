@@ -128,6 +128,7 @@ function ballCollide(box){
           const dis = (box.top+box.bottom)/2-ball.position.y
           ball.direction.y = dis / (box.size.height / 2)
           ball.direction.y = Math.max(-1, Math.min(1, ball.direction.y))
+          playMusic("paddle.MP3");
         }
 }
 function ballLoop(){
@@ -162,6 +163,7 @@ function ballLoop(){
     ball.speed=2;
     rightScore+=1;
     p2Score.textContent="P2 Score:"+rightScore;
+    playMusic("score.MP3");
   }
   if (
   ball.position.x+ball.size.radius>=1000 &&
@@ -182,6 +184,7 @@ function ballLoop(){
     ball.speed=2;
     leftScore+=1;
     p1Score.textContent="P1 Score:"+leftScore;
+    playMusic("score.MP3");
   }
     if(ball.position.y-ball.size.radius<=0||ball.position.y+ball.size.radius>=500)
     {
